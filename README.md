@@ -1,8 +1,11 @@
 # Canvas-world
+
 My own workshop of cool things I have found and made.
 
-The Setup script I use for threeJs can be found [here](/ThreeSetup.js)
+The setup script I use for [three.js](https://threejs.org/) can be found [here](/ThreeSetup.js)
+
 ----
+
 
 ### Attractors:
 1. [x] [Modified Chua Chaotic attractor](/Modified%20Chua%20Chaotic%20attractor) 6/4/19
