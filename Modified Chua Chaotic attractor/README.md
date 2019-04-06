@@ -10,7 +10,7 @@ dz(t)/dt = βy(t)
 
 Where
 ```js
-h := -b*sin((π*x(t) / 2a) + d)
+h := -b*sin((π*x(t) / 2*a) + d)
 
 init := x[0] = 1
         y[0] = 1
