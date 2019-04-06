@@ -1,4 +1,4 @@
-# Canvas-world
+# Canvas World
 
 My own workshop of cool things I have found and made.
 
