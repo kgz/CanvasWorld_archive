@@ -14,6 +14,6 @@ Altho it is not the most perfect script it was still fun to play around the idea
 
 ### Side note...
 There are many flaws with this:
-- If theres a white background, there will be a border around object, (maybe with a bit of tweeking it might be ok).
+- If theres a white background, there will be a border around object, (maybe with a bit of adjusting it might be ok).
 
-- This relies on the object being symetrical (or near enough); as can be seen with the flowers, the left most flower in the 3d image doesnt look like a flower at all.
+- This relies on the object being symmetrical (or near enough); as can be seen with the flowers, the left most flower in the 3d image doesn't look like a flower at all.
