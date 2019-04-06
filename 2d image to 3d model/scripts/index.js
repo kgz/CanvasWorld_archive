@@ -1,10 +1,4 @@
-// 2d image to 3d.
-//uses the total value of the pixel color to define a z-index.
-//works best on sharp colours with black or transparent background, white backgrounds can leave a border.
-
-
 const numParticles = 100;
-
 $(function () {
     $("<input/>", {
         css: {
@@ -78,10 +72,12 @@ $(function () {
         camera.lookAt(scene.position);
         composer.render();
         rafId = requestAnimationFrame(loop);
-        var delta = now - prev;
-        var fps = 1000 / delta;
-        prev = now;
-        $("#fps").text("fps: " + Math.round(fps))
+        if(rafId % 10 == 0){
+            var delta = now - prev;
+            var fps = 1000 / delta;
+            prev = now;
+            $("#fps").text("fps: " + Math.round(fps*10))
+        }
         scene.rotation.y += 0.01;
     }
     go();
