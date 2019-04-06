@@ -7,4 +7,4 @@ This was a simple idea that I thought of when someone was talking about manipula
 
 [logo]: http://pictify.saatchigallery.com/files/works/pink-gerbera-daisies-1409848544_org.jpg ""
 
-[logo1]: /sample.gif
+[logo1]: https://github.com/kgz/CanvasWorld/blob/master/2d%20image%20to%203d%20model/sample.gif?raw=true
