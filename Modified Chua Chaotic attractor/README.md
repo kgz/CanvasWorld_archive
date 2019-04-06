@@ -28,4 +28,4 @@ And
 
 [logo]
 
-[logo]: /sample.gif
+[logo]: /sample.gif ""
