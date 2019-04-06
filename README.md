@@ -1,7 +1,7 @@
 # Canvas-world
 My own workshop of cool things I have found and made.
 
-
+The Setup script I use for threeJs can be found [here](/ThreeSetup.js)
 ----
 
 ### Attractors:
