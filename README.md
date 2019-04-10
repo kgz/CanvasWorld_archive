@@ -17,7 +17,7 @@ The setup script I use for [three.js](https://threejs.org/) can be found [here](
 7. [ ] PWL Duffing chaotic attractor
  
 ### Maps:
-1. [ ] 3-cells CNN system
+1. [ ] 3-cells CNN system 
 2. [ ] 2D circular chaotic map
 3. [ ] 2D Lorenz system 
 4. [ ] 2D Rational chaotic map 
@@ -143,7 +143,7 @@ The setup script I use for [three.js](https://threejs.org/) can be found [here](
 124. [ ] Symmetric Flow attractor 
 125. [ ] Symplectic map
 126. [ ] Tangent map
-127. [ ] Thomas' cyclically symmetric attractor
+127. [x] Thomas' cyclically symmetric attractor
 128. [ ] Tent map
 129. [ ] Tinkerbell map
 130. [ ] Triangle map
