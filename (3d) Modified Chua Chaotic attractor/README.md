@@ -21,4 +21,4 @@ init := x[0] = 1, y[0] = 1, z[0] = 0
 
 ![alt][logo]
 
-[logo]: https://github.com/kgz/CanvasWorld/blob/master/Modified%20Chua%20Chaotic%20attractor/sample.gif?raw=true ""
+[logo]: /(3d)%20Modified%20Chua%20Chaotic%20attractor/sample.gif ""
