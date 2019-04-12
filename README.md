@@ -8,14 +8,15 @@ The setup script I use for [three.js](https://threejs.org/) can be found [here](
 
 
 ### Attractors:
-1. [x] [Modified Chua Chaotic attractor](/Modified%20Chua%20Chaotic%20attractor) 6/4/19
+1. [x] [(3d) Modified Chua Chaotic attractor](/Modified%20Chua%20Chaotic%20attractor) 6/4/19
 2. [ ] Chen attractor
 3. [ ] Hopalong Attractor
 4. [ ] Lorenz attractor
 5. [ ] Thomas cyclically symmetric attractor
 6. [ ] Aizawa Attractor
 7. [ ] PWL Duffing chaotic attractor
- 
+8. [x] [(2d) Bedhead Attractor](/(2d)%20Bedhead%20Attractor) 11/04/19
+9. [x] [(2d) Clifford Attractor](/(2d)%20Clifford%20Attractor) 11/04/19
 ### Maps:
 1. [ ] 3-cells CNN system 
 2. [ ] 2D circular chaotic map
