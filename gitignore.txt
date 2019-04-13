@@ -2,3 +2,5 @@
 .git
 
 gitignore.txt
+
+*/index.html
