@@ -8,7 +8,7 @@ dy(t)/dt = x(t) - y(t) + z(t)
 dz(t)/dt = βy(t)
 ```
 
-Where
+
 ```js
 h := -b*sin((π*x(t) / 2*a) + d)
 
@@ -19,6 +19,7 @@ alpha = 10.82, beta = 14.286
 init := x[0] = 1, y[0] = 1, z[0] = 0
 ```
 
+
 ![alt][logo]
 
-[logo]: /(3d)%20Modified%20Chua%20Chaotic%20attractor/sample.gif ""
+[logo]:sample.gif ""

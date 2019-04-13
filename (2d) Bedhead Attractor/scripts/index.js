@@ -37,6 +37,8 @@ $(function () {
         if(currentPos >= numParticles) {
             currentPos = 0;
             colorPos = 0;  
+            x = 0;
+            y = 0;
         }
         for (let index = 0; index < numParticles/100; index++) {
             var positions = starField.geometry.attributes.position.array;

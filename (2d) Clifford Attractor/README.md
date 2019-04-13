@@ -10,3 +10,6 @@ y = Math.sin(b * x) + d * Math.cos( b * y);
 ```
 
 
+![alt][logo]
+
+[logo]:sample.gif ""

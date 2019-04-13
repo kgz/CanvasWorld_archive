@@ -77,10 +77,6 @@ $(function () {
             x += x1;
             y += y1;
             z += z1;
-            c = new THREE.Color("hsl(" + colorPos % 255 + ", 50%, 50%)")
-
-  
-
             positions[currentPos++] = x * 20;
             positions[currentPos++] = y * 20;
             positions[currentPos++] = z * 20;

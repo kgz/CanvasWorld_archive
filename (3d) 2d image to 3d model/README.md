@@ -9,7 +9,8 @@ Altho it is not the most perfect script it was still fun to play around the idea
 
 [logo]: http://pictify.saatchigallery.com/files/works/pink-gerbera-daisies-1409848544_org.jpg ""
 
-[logo1]: https://github.com/kgz/CanvasWorld/blob/master/2d%20image%20to%203d%20model/sample.gif?raw=true ""
+[logo1]:sample.gif ""
+
 
 
 ### Side note...
