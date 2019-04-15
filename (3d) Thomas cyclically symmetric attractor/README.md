@@ -2,7 +2,4 @@
 
 
 
-
-![alt][logo]
-
-[logo]:sample.gif ""
+![samplegif](sample.gif)

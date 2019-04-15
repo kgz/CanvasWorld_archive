@@ -4,13 +4,7 @@ This was a simple idea that I thought of when someone was talking about manipula
 
 Altho it is not the most perfect script it was still fun to play around the idea of using the total r + g + b value of a pixel to get a z value.
 
-
-![alt][logo] - > ![alt][logo1]
-
-[logo]: http://pictify.saatchigallery.com/files/works/pink-gerbera-daisies-1409848544_org.jpg ""
-
-[logo1]:sample.gif ""
-
+![mainimg](http://pictify.saatchigallery.com/files/works/pink-gerbera-daisies-1409848544_org.jpg) -> ![samplegif](sample.gif)
 
 
 ### Side note...

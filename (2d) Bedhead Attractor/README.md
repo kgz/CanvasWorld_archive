@@ -1,8 +1,3 @@
 ### Bedhead Attractor
 
-
-
-
-![alt][logo]
-
-[logo]:sample.gif ""
+![samplegif](sample.gif)

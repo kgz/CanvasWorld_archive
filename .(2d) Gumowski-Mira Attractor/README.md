@@ -14,8 +14,4 @@ w := a * x + (1-a) * 2 * x * x/(1+x*x)
 init = x[0] = 1, y[0] = 0.5;
 a, b = -1..1;
 ```
-
-
-![alt][logo]
-
-[logo]:sample.gif ""
+![samplegif](sample.gif)

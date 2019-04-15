@@ -20,6 +20,4 @@ init := x[0] = 1, y[0] = 1, z[0] = 0
 ```
 
 
-![alt][logo]
-
-[logo]:sample.gif ""
+![samplegif](sample.gif)

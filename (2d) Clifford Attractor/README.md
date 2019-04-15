@@ -9,7 +9,4 @@ x = Math.sin(a * y) + c * Math.cos(a * x);
 y = Math.sin(b * x) + d * Math.cos( b * y);
 ```
 
-
-![alt][logo]
-
-[logo]:sample.gif ""
+![samplegif](sample.gif)
