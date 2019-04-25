@@ -30,7 +30,7 @@ $(function () {
 
     
     var starsGeometry = new THREE.BufferGeometry();
-    starsGeometry.addAttribute('position', new THREE.BufferAttribute(new Float32Array(numParticles * 2), 2));
+    starsGeometry.addAttribute('position', new THREE.BufferAttribute(new Float32Array(numParticles * 3), 3));
     starsGeometry.addAttribute('color', new THREE.BufferAttribute(new Float32Array(numParticles*3), 3));
     var starsMaterial = new THREE.PointsMaterial({vertexColors: THREE.VertexColors});
     starField = new THREE.Points(starsGeometry, starsMaterial);
@@ -63,6 +63,7 @@ $(function () {
 
             positions[currentPos++] = x * 100;
             positions[currentPos++] = y * 100;
+            positions[currentPos++] = 0;
     
         }
         starField.geometry.attributes.position.needsUpdate = true;

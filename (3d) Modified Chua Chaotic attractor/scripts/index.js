@@ -13,7 +13,6 @@ class options{
         this.beta = 14.286;
         this.a = 1300; //Dat.gui wouldn't allow anything below .1 :(
         this.b = 110; //these get divided by 1,000 in the algorithm
-        this.c = 7000;
         this.d = 20000;
         this.dt = 0.1;
         this.Particles = 200000
@@ -24,7 +23,6 @@ $(function () {
     const gui = new dat.GUI();
     gui.add(opts, 'a', 0, 3000).name("a / 1000")
     gui.add(opts, 'b',  0, 3000).name("b / 1000")
-    gui.add(opts, 'c',  0, 10000).name("c / 1000")
     gui.add(opts, 'd',  0, 50000).name("d / 1000")
     setup();
     camera.position.x = 411.9288657852996
@@ -62,7 +60,6 @@ $(function () {
             var positions = starField.geometry.attributes.position.array;
             a = opts.a / 1000;
             b = opts.b / 1000;
-            c = opts.c / 1000;
             d = opts.d / 1000;
 
             h = -b * Math.sin(((Math.PI * x) / (2 * a)) + d)

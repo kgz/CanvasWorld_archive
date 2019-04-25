@@ -15,10 +15,14 @@ The setup script I use for [three.js](https://threejs.org/) can be found [here](
 1. [x] [Clifford Attractor]((2d)%20Clifford%20Attractor)
 2. [x] [Fractal Dream Attractor]((2d)%20Fractal%20Dream%20Attractor)
 3. [x] [Henon Map]((2d)%20Henon%20Map)
+4. [x] [Hopalong Attractor]((2d)%20Hopalong%20Attractor)
+5. [x] [Hopalong Attractor 1]((2d)%20Hopalong%20Attractor%201)
+6. [x] [Ikeda Map]((2d)%20Ikeda%20Map)
 ---
 ### 3d
 0. [x] [2d image to 3d model]((3d)%202d%20image%20to%203d%20model)
 1. [x] [Aizawa Attractor]((3d)%20Aizawa%20Attractor)
-2. [x] [Modified Chua Chaotic attractor]((3d)%20Modified%20Chua%20Chaotic%20attractor)
-3. [x] [Thomas cyclically symmetric attractor]((3d)%20Thomas%20cyclically%20symmetric%20attractor)
+2. [x] [Figure Knots]((3d)%20Figure%20Knots)
+3. [x] [Modified Chua Chaotic attractor]((3d)%20Modified%20Chua%20Chaotic%20attractor)
+4. [x] [Thomas cyclically symmetric attractor]((3d)%20Thomas%20cyclically%20symmetric%20attractor)
 ---
