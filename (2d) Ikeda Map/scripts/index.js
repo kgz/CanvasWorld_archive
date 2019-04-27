@@ -6,6 +6,7 @@ let starField;
 let x = 0,
     y = 0,
     z = 0;
+
 let scale = 1000
 class options {
     constructor() {

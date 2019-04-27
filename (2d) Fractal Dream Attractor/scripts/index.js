@@ -1,4 +1,4 @@
-const numParticles = 100000  //1000000;
+const numParticles = 50000  //1000000;
 let currentPos = 0;
 let colorPos = 0;
 let interval;
