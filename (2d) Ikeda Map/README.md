@@ -1,4 +1,4 @@
-### Henon Map
+### Ikeda Map
 
  ```js
 x = -(x*x) + b * y + a
