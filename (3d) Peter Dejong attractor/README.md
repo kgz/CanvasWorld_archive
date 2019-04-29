@@ -1,9 +1,9 @@
 ### De jong attractor
 
 ```JS
-x1[t+1] = Math.sin(opts.a * z) - Math.cos(opts.b * x)
-y1[t+1] = Math.sin(opts.c * x) - Math.cos(opts.d * y)
-z1[t+1] = Math.sin(opts.e * y) - Math.cos(opts.f * z)
+x[t+1] = Math.sin(opts.a * z) - Math.cos(opts.b * x)
+y[t+1] = Math.sin(opts.c * x) - Math.cos(opts.d * y)
+z[t+1] = Math.sin(opts.e * y) - Math.cos(opts.f * z)
 ```
 where
 
