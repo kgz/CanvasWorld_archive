@@ -26,6 +26,6 @@ The setup script I use for [three.js](https://threejs.org/) can be found [here](
 1. [x] [Aizawa Attractor]((3d)%20Aizawa%20Attractor)
 2. [x] [Figure Knots]((3d)%20Figure%20Knots)
 3. [x] [Modified Chua Chaotic attractor]((3d)%20Modified%20Chua%20Chaotic%20attractor)
-4. [x] [Peter Dejong attractor.1]((3d)%20Peter%20Dejong%20attractor.1)
+4. [x] [Peter Dejong attractor]((3d)%20Peter%20Dejong%20attractor)
 5. [x] [Thomas cyclically symmetric attractor]((3d)%20Thomas%20cyclically%20symmetric%20attractor)
 ---
