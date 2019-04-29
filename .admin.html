@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
+    <script src="/static/resources/jquery-3.3.1.min.js"></script>
+    <script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+    <script>
+    $(document).ready(function() {
+    $('table').DataTable({
+    });
+} );
+
+</script>
+</head>
+<body>
+    <table class="display">
+            <thead>
+            {% for x in logs[0] %}
+            <th>{{x}}</th>
+            {% endfor %}
+        </thead>
+        <tbody>
+
+        {%for x in logs %}
+        <tr>
+
+            {% for i in x %}
+            <td>{{x[i]}}</td>
+            {% endfor %}
+        </tr>
+
+        {% endfor %}
+    </tbody>
+    </table>
+
+</body>
+</html>
+
+
