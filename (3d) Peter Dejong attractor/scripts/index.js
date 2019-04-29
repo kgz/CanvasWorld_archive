@@ -35,20 +35,8 @@ $(function () {
    
     var starsMaterial = new THREE.PointsMaterial({vertexColors: THREE.VertexColors});
     starField = new THREE.Points(starsGeometry, starsMaterial);
-
-    // for (let index = 0; index < starField.geometry.attributes.color.array.length; index+=3) {
-    //     const colors = starField.geometry.attributes.color.array
-    //     c = new THREE.Color("hsl(" + index % 255 + ", 50%, 50%)")
-    //     colors[index] = c.r;
-    //     colors[index+1] = c.g
-    //     colors[index+2] = c.b
-    // }
-
-
     scene.add(starField)
-
     let up = function () {
-        
         if(currentPos >= numParticles) {
             currentPos = 0;
             colorPos = 0;  
@@ -59,16 +47,9 @@ $(function () {
         for (let index = 0; index < numParticles/100; index++) {
             var positions = starField.geometry.attributes.position.array;
             var colors = starField.geometry.attributes.color.array
-            // x1 = Math.sin(opts.a * z) - Math.cos(opts.b * y)
-            // y1 = Math.sin(opts.c * x) - Math.cos(opts.d * z)
-            // z1 = Math.sin(opts.e * y) - Math.cos(opts.f * x)
             x1 = Math.sin(opts.a * z) - Math.cos(opts.b * x)
             y1 = Math.sin(opts.c * x) - Math.cos(opts.d * y)
             z1 = Math.sin(opts.e * y) - Math.cos(opts.f * z)
-
-            // x1 *= opts.dt;
-            // y1 *= opts.dt;
-            // z1 *= opts.dt;
             x = x1;
             y = y1;
             z = z1;
@@ -107,23 +88,10 @@ $(function () {
             prev = now;
             $("#fps").text("fps: " + Math.round(fps * 10) + " at 100 intervals ")
         }
-        // stars = starField.geometry.attributes.color.array
-
-        // first = (stars[stars.length -3], stars[stars.length-2], stars[stars.length-1])
-        // for (let x = 3; x < starField.geometry.attributes.color.array.length; x= x +3) {
-        //     stars[x-3] =  stars[x];
-        //     stars[x-2] = stars[x+1];
-        //     stars[x-1] = stars[x+2];
-        // }
-        // stars[0] = first[0]
-        // stars[1] = first[1]
-        // stars[2] = first[2]
-
     }
     loop();
     interval = setInterval(function () {
         up();
-        // scene.rotation.y += 0.001
     }, 0)
 
     $("#canvas").append(renderer.domElement);

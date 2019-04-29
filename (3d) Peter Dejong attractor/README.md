@@ -1,14 +1,14 @@
 ### De jong attractor
 
 ```JS
-x[t+1] = Math.sin(a * y) - Math.cos(b * x)
-y[t+1] = Math.sin(c * x) - Math.cos(d * y)
-
+x1[t+1] = Math.sin(opts.a * z) - Math.cos(opts.b * x)
+y1[t+1] = Math.sin(opts.c * x) - Math.cos(opts.d * y)
+z1[t+1] = Math.sin(opts.e * y) - Math.cos(opts.f * z)
 ```
 where
 
 ```JS
-a, b, c, d = [-5..5];
+a, b, c, d, e, f = [-5..5];
 ```
 
 
