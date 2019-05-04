@@ -1,4 +1,4 @@
-const numParticles = 50000;
+const numParticles = 100000;
 let currentPos = 0;
 let colorPos = 0;
 let interval;
@@ -8,21 +8,19 @@ let x = 0,
 
 class options{
     constructor(){
-        this.a = 13000; //Dat.gui wouldn't allow anything below .1 :(
-        this.b = 37000; //these get divided by 10,000 in the algorithm
+        this.a = .13; //Dat.gui wouldn't allow anything below .1 :(
+        this.b = .37; //these get divided by 10,000 in the algorithm
 
-        this.color = [0, 255, 255]
-        this.Particles = 200000
+        this.color = [0, 255, 255];
     }
 }
 $(function () {
     opts = new options()
     const gui = new dat.GUI();
-    gui.add(opts, 'a', 1, 100000).name("a / 10000")
-    gui.add(opts, 'b',  1, 100000).name("b / 10000")
-    gui.addColor(opts, "color")
+    gui.add(opts, 'a').min(0).max(1).step(0.001)
+    gui.add(opts, 'b').min(0).max(1).step(0.001)
     setup();
-    camera.position.z = -1000;
+    camera.position.z = 500;
     // camera.position.x = -1000
 
     
@@ -40,13 +38,11 @@ $(function () {
             x = 0;
             y = 0;
         }
-        for (let index = 0; index < numParticles/100; index++) {
+        for (let index = 0; index < numParticles/10; index++) {
             var positions = starField.geometry.attributes.position.array;
             var colors = starField.geometry.attributes.color.array;
-            a = opts.a / 10000;
-            b = opts.b / 10000;
-            newx = Math.sin(x * y / b) * y + Math.cos(a * x - y)
-            newy = x + Math.sin(y) / b
+            newx = Math.sin(x * y / opts.b) * y + Math.cos(opts.a * x - y)
+            newy = x + Math.sin(y) /opts.b
             x = newx;
             y = newy;
 
@@ -54,8 +50,8 @@ $(function () {
             colors[colorPos++] = opts.color[1];
             colors[colorPos++] = opts.color[2];
 
-            positions[currentPos++] = x * 100;
-            positions[currentPos++] = y * 100;
+            positions[currentPos++] = x * 20;
+            positions[currentPos++] = y * 20;
             positions[currentPos++] = 0;
     
         }

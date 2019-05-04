@@ -18,10 +18,6 @@ class options {
     }
 }
 
-function map(n, start1, stop1, start2, stop2){
-    return ((n-start1)/(stop1-start1))*(stop2-start2)+start2;
-}
-
 function perlin(index){
     var positions = starField.geometry.attributes.position.array
     x = position[index]

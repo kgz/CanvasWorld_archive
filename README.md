@@ -20,6 +20,7 @@ The setup script I use for [three.js](https://threejs.org/) can be found [here](
 6. [x] [Hopalong Attractor 1](http://canvasworld.xyz/2d_Hopalong_Attractor_1)
 7. [x] [Ikeda Map](http://canvasworld.xyz/2d_Ikeda_Map)
 8. [x] [Peter Dejong attractor](http://canvasworld.xyz/2d_Peter_Dejong_attractor)
+9. [x] [Svensson attractor](http://canvasworld.xyz/2d_Svensson_attractor)
 ---
 ### 3d
 0. [x] [2d image to 3d model](http://canvasworld.xyz/3d_2d_image_to_3d_model)
@@ -27,5 +28,6 @@ The setup script I use for [three.js](https://threejs.org/) can be found [here](
 2. [x] [Figure Knots](http://canvasworld.xyz/3d_Figure_Knots)
 3. [x] [Modified Chua Chaotic attractor](http://canvasworld.xyz/3d_Modified_Chua_Chaotic_attractor)
 4. [x] [Peter Dejong attractor](http://canvasworld.xyz/3d_Peter_Dejong_attractor)
-5. [x] [Thomas cyclically symmetric attractor](http://canvasworld.xyz/3d_Thomas_cyclically_symmetric_attractor)
+5. [x] [Svensson attractor (modified)](http://canvasworld.xyz/3d_Svensson_attractor_(modified))
+6. [x] [Thomas cyclically symmetric attractor](http://canvasworld.xyz/3d_Thomas_cyclically_symmetric_attractor)
 ---

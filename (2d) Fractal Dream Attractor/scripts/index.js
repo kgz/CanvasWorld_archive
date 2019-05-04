@@ -9,20 +9,20 @@ let x = -2,
 let scale = 100
 class options {
     constructor() {
-        this.a = -1.31 * scale; //Dat.gui wouldn't allow anything below .1 :(
-        this.b = 2.722609509936534 * scale; //these get divided by ${scale} in the algorithm
-        this.c = 0.8439461727881254 * scale;
-        this.d = 0.9089758263101316 * scale;
+        this.a = -1.31;
+        this.b = 2.722609509936534 ;
+        this.c = 0.8439461727881254;
+        this.d = 0.9089758263101316 ;
         
     }
 }
 $(function () {
     opts = new options()
     const gui = new dat.GUI();
-    gui.add(opts, 'a', -300, 300).name("a / " + scale)
-    gui.add(opts, 'b', -300, 300).name("b / " + scale)
-    gui.add(opts, 'c', -50, 150).name("c / " + scale)
-    gui.add(opts, 'd', -50, 150).name("d / "  + scale)
+    gui.add(opts, 'a').min(-3).max(3).step(0.001)
+    gui.add(opts, 'b').min(-3).max(3).step(0.001)
+    gui.add(opts, 'c').min(-3).max(3).step(0.001)
+    gui.add(opts, 'd').min(-3).max(3).step(0.001)
     setup();
     var starsGeometry = new THREE.BufferGeometry();
     starsGeometry.addAttribute('position', new THREE.BufferAttribute(new Float32Array(numParticles * 3), 3));
@@ -57,12 +57,8 @@ $(function () {
             z = 0;
         }
         for (let index = 0; index < numParticles / 100; index++) {
-            a = opts.a / scale
-            b = opts.b / scale
-            c = opts.c / scale
-            d = opts.d / scale
-            xnew = Math.sin(b * y) +c * Math.sin(b * x)
-            ynew = Math.sin(a * x) + d * Math.sin(a * y)
+            xnew = Math.sin(opts.b * y) +opts.c * Math.sin(opts.b * x)
+            ynew = Math.sin(opts.a * x) + opts.d * Math.sin(opts.a * y)
             x += xnew
             y += ynew
             positions[currentPos++] = xnew * 300; //- $("#canvas").innerWidth()/2;
