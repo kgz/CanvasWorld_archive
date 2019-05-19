@@ -1,4 +1,4 @@
-const numParticles = 50000  //1000000;
+const numParticles = 100000  //1000000;
 let currentPos = 0;
 let colorPos = 0;
 let interval;
@@ -6,44 +6,35 @@ let starField
 let x = -2,
     y = -2,
     z = 0;
-let scale = 100
 class options {
     constructor() {
-        this.a = -1.31;
-        this.b = 2.722609509936534 ;
-        this.c = 0.8439461727881254;
-        this.d = 0.9089758263101316 ;
-        
+        this.a = 1.17;
+        this.b = 2.7640000000000002 ;
+        this.c = 1.073;
+        this.d = 1.561 ;
     }
 }
 $(function () {
     opts = new options()
     const gui = new dat.GUI();
-    gui.add(opts, 'a').min(-3).max(3).step(0.001)
-    gui.add(opts, 'b').min(-3).max(3).step(0.001)
-    gui.add(opts, 'c').min(-3).max(3).step(0.001)
-    gui.add(opts, 'd').min(-3).max(3).step(0.001)
+    gui.add(opts, 'a').min(0).max(3).step(0.001)
+    gui.add(opts, 'b').min(0).max(3).step(0.001)
+    gui.add(opts, 'c').min(0).max(3).step(0.001)
+    gui.add(opts, 'd').min(0).max(3).step(0.001)
     setup();
+    camera.position.z = 400
+
     var starsGeometry = new THREE.BufferGeometry();
     starsGeometry.addAttribute('position', new THREE.BufferAttribute(new Float32Array(numParticles * 3), 3));
-    starsGeometry.addAttribute('color', new THREE.BufferAttribute(new Float32Array(numParticles * 3), 3));
 
     var starsMaterial = new THREE.PointsMaterial({
-        vertexColors: THREE.VertexColors,
-        // color:new THREE.Color("rgb(0, 255, 255)")
+        color: 0xFFFF00,
+        transparent:true,
+        opacity:0.4
     });
     starField = new THREE.Points(starsGeometry, starsMaterial);
 
-    for (let index = 0; index < starField.geometry.attributes.color.array.length; index += 3) {
-        const colors = starField.geometry.attributes.color.array
-
-        percent = (index / 255)
-        out = percent * 255
-        c = new THREE.Color("hsl(" + out % 255 + ", 50%, 50%)")
-        colors[index] = c.r;
-        colors[index + 1] = c.g
-        colors[index + 2] = c.b
-    }
+  
     scene.add(starField)
     var positions = starField.geometry.attributes.position.array;
 
@@ -59,14 +50,13 @@ $(function () {
         for (let index = 0; index < numParticles / 100; index++) {
             xnew = Math.sin(opts.b * y) +opts.c * Math.sin(opts.b * x)
             ynew = Math.sin(opts.a * x) + opts.d * Math.sin(opts.a * y)
-            x += xnew
-            y += ynew
-            positions[currentPos++] = xnew * 300; //- $("#canvas").innerWidth()/2;
-            positions[currentPos++] = ynew * 300;
-            positions[currentPos++] = 0;
+            x = xnew
+            y = ynew
+            positions[currentPos++] = xnew * 50; //- $("#canvas").innerWidth()/2;
+            positions[currentPos++] = ynew  * 50;
+            positions[currentPos++] = 0
         }
         starField.geometry.attributes.position.needsUpdate = true;
-        starField.geometry.attributes.color.needsUpdate = true;
 
         controls.update();
         renderer.render(scene, camera);
@@ -85,16 +75,6 @@ $(function () {
             prev = now;
             $("#fps").text("fps: " + Math.round(fps * 10) + " at 100 intervals ")
         }
-        stars = starField.geometry.attributes.color.array
-        first = (stars[stars.length - 3], stars[stars.length - 2], stars[stars.length - 1])
-        for (let x = 3; x < starField.geometry.attributes.color.array.length; x = x + 3) {
-            stars[x - 3] = stars[x];
-            stars[x - 2] = stars[x + 1];
-            stars[x - 1] = stars[x + 2];
-        }
-        stars[0] = first[0]
-        stars[1] = first[1]
-        stars[2] = first[2]
 
     }
     loop();

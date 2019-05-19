@@ -6,20 +6,17 @@ let starField
 let x = 0.03,
     y = 0.01,
     z = 0;
-let scale = 100
 class options {
     constructor() {
-        this.a = 1.4 * scale; //Dat.gui wouldn't allow anything below .1 :(
-        this.b = 0.3 * scale; //these get divided by ${scale} in the algorithm
-
-        
+        this.a = 1.4;
+        this.b = .3; 
     }
 }
 $(function () {
     opts = new options()
     const gui = new dat.GUI();
-    gui.add(opts, 'a', 0, 200).name("a / " + scale)
-    gui.add(opts, 'b', 0, 100).name("b / " + scale)
+    gui.add(opts, 'a').min(0).max(2).step(0.0001)
+    gui.add(opts, 'b').min(0).max(2).step(0.0001)
 
     setup();
     var starsGeometry = new THREE.BufferGeometry();
@@ -28,7 +25,6 @@ $(function () {
 
     var starsMaterial = new THREE.PointsMaterial({
         vertexColors: THREE.VertexColors,
-        // color:new THREE.Color("rgb(0, 255, 255)")
     });
     starField = new THREE.Points(starsGeometry, starsMaterial);
 
@@ -55,8 +51,8 @@ $(function () {
             z = 0;
         }
         for (let index = 0; index < numParticles / 100; index++) {
-            a = opts.a / scale
-            b = opts.b / scale
+            a = opts.a
+            b = opts.b
 
 
             let x1 = -(x*x) + b * y + a

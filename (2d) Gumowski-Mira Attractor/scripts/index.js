@@ -8,8 +8,8 @@ let x = 0,
     z = 0;
 class options {
     constructor() {
-        this.a = 0.000001; //Dat.gui wouldn't allow anything below .1 :(
-        this.b = 0.780; //these get divided by 1,000 in the algorithm
+        this.a = 0.000001;
+        this.b = 0.780; 
         this.u = 0.99424;
     }
 }
@@ -20,14 +20,9 @@ $(function () {
     gui.add(opts, 'b').min(0).max(1).step(0.00001)
     gui.add(opts, 'u').min(-1).max(1).step(0.00001)
     setup();
-    // camera.position.x = 411.9288657852996
-    // camera.position.y = 139.651467039443
-    // camera.position.z = -411.458381486034
-
     var starsGeometry = new THREE.BufferGeometry();
     starsGeometry.addAttribute('position', new THREE.BufferAttribute(new Float32Array(numParticles * 3), 3));
     starsGeometry.addAttribute('color', new THREE.BufferAttribute(new Float32Array(numParticles * 3), 3));
-
     var starsMaterial = new THREE.PointsMaterial({
         vertexColors: THREE.VertexColors
     });
