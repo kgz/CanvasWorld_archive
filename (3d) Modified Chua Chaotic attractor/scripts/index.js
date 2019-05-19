@@ -1,4 +1,4 @@
-const numParticles = 1000000;
+const numParticles = 20000;
 let currentPos = 0;
 let colorPos = 0;
 let interval;
@@ -11,19 +11,20 @@ class options{
     constructor(){
         this.alpha = 10.82;
         this.beta = 14.286;
-        this.a = 1300; //Dat.gui wouldn't allow anything below .1 :(
-        this.b = 110; //these get divided by 1,000 in the algorithm
-        this.d = 20000;
+        this.a = 1.3,
+        this.b = 0.11,
+        this.d = 2.981;
         this.dt = 0.1;
-        this.Particles = 200000
     }
 }
 $(function () {
     opts = new options()
     const gui = new dat.GUI();
-    gui.add(opts, 'a', 0, 3000).name("a / 1000")
-    gui.add(opts, 'b',  0, 3000).name("b / 1000")
-    gui.add(opts, 'd',  0, 50000).name("d / 1000")
+    gui.add(opts, 'alpha').min(0).max(20).step(0.001)
+    gui.add(opts, 'beta').min(10).max(20).step(0.001)
+    gui.add(opts, 'a').min(0).max(3).step(0.001)
+    gui.add(opts, 'b').min(0).max(3).step(0.001)
+    gui.add(opts, 'd').min(0).max(5).step(0.001)
     setup();
     camera.position.x = 411.9288657852996
     camera.position.y = 139.651467039443
@@ -56,13 +57,11 @@ $(function () {
             y = 1;
             z = 0;
         }
-        for (let index = 0; index < numParticles/100; index++) {
+        for (let index = 0; index < numParticles/1; index++) {
             var positions = starField.geometry.attributes.position.array;
-            a = opts.a / 1000;
-            b = opts.b / 1000;
-            d = opts.d / 1000;
+           
 
-            h = -b * Math.sin(((Math.PI * x) / (2 * a)) + d)
+            h = -opts.b * Math.sin(((Math.PI * x) / (2 * opts.a)) + opts.d)
 
             let x1 = opts.alpha * (y - h)
             let y1 = x - y + z;
@@ -74,9 +73,9 @@ $(function () {
             x += x1;
             y += y1;
             z += z1;
-            positions[currentPos++] = x * 20;
-            positions[currentPos++] = y * 20;
-            positions[currentPos++] = z * 20;
+            positions[currentPos++] = x * 10;
+            positions[currentPos++] = y * 10;
+            positions[currentPos++] = z * 10;
         }
         starField.geometry.attributes.position.needsUpdate = true;
         starField.geometry.attributes.color.needsUpdate = true;
