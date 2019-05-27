@@ -27,8 +27,9 @@ The setup script I use for [three.js](https://threejs.org/) can be found [here](
 1. [x] [Aizawa Attractor](http://canvasworld.xyz/3d_Aizawa_Attractor)
 2. [x] [Bedhead Attractor](http://canvasworld.xyz/3d_Bedhead_Attractor)
 3. [x] [Figure Knots](http://canvasworld.xyz/3d_Figure_Knots)
-4. [x] [Modified Chua Chaotic attractor](http://canvasworld.xyz/3d_Modified_Chua_Chaotic_attractor)
-5. [x] [Peter Dejong attractor](http://canvasworld.xyz/3d_Peter_Dejong_attractor)
-6. [x] [Svensson attractor (modified)](http://canvasworld.xyz/3d_Svensson_attractor_(modified))
-7. [x] [Thomas cyclically symmetric attractor](http://canvasworld.xyz/3d_Thomas_cyclically_symmetric_attractor)
+4. [x] [Lorenz 86](http://canvasworld.xyz/3d_Lorenz_86)
+5. [x] [Modified Chua Chaotic attractor](http://canvasworld.xyz/3d_Modified_Chua_Chaotic_attractor)
+6. [x] [Peter Dejong attractor](http://canvasworld.xyz/3d_Peter_Dejong_attractor)
+7. [x] [Svensson attractor (modified)](http://canvasworld.xyz/3d_Svensson_attractor_(modified))
+8. [x] [Thomas cyclically symmetric attractor](http://canvasworld.xyz/3d_Thomas_cyclically_symmetric_attractor)
 ---
