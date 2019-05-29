@@ -1,10 +1,10 @@
-### Polynomial, Type C
+### Polynomial, Type B
 
 
 ```JS
-x[+1]= xa + x * (xb + xc * x + xd * y) + y * (xe + xf * y)
-y[+1]= ya + yb + yc * z + yd * Math.abs(x) + ye * Math.abs(y) + yf * Math.abs(z)
-z[+1]= za + z*(zb + zc * z + zd * x) + x * (ze + zf * x)
+x[+1] = a + y - z * (b * y)
+y[+1] = c + z - x * (d * z)
+z[+1] = e + x - y * (f * x)       
 ```
 
 ````JS
