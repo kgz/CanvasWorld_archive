@@ -79,11 +79,6 @@ $(function () {
                 return opts[i][ii] || 0
             }
 
-            // xnew = g("x", "a") + x * (g("x", "b") + g("x", "c") * x + g("x", "d") * y) + y * (g("x", "e") + g("x", "f") * y)
-            // ynew = g("y", "a") + g("y", "b") + g("y", "c") * z + g("y", "d") * Math.abs(x) + g("y", "e") * Math.abs(y) + g("y", "f") * Math.abs(z)
-            // znew = g("z", "a") + z * (g("z", "b") + g("z", "c") * z + g("z", "d") * x) + x * (g("z", "e") + g("z", "f") * x)
-
-
             xnew = g("x", "a") + x * (g("x", "b") + g("x", "c") * x + g("x", "d") * y) + y * (g("x", "e") + g("x", "f") * y)
             ynew = g("y", "a") + y * (g("y", "b") + g("y", "c") * y + g("y", "d") * z) + z * (g("y", "e") + g("y", "f") * z)
             znew = g("z", "a") + z * (g("z", "b") + g("z", "c") * z + g("z", "d") * x) + x * (g("z", "e") + g("z", "f") * x)
