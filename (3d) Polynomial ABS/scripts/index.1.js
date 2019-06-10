@@ -12,11 +12,35 @@ let r = 0,
 let scale = 1000
 class options {
     constructor() {
-        this.a = -3;
-        this.b = 3
-        this.c = 3
-        this.d = 3;
-        this.e = 3;
+        this.x ={
+            a:0.607407407407407, 
+            b:1.159, 
+            c:0.281481481481481, 
+            d:-0.191,
+            e:-0.348, 
+            f:-0.176, 
+            g:-0.702
+        },
+
+        this.y ={
+            a:-0.693,
+            b:-0.521, 
+            c:0.399, 
+            d:-0.968, 
+            e:0.958,
+            f:0.305, 
+            g:-0.43
+        },
+
+        this.z ={
+            a:0.133, 
+            b:0.416,
+            c:1.144, 
+            d:-0.651851851851852, 
+            e:-0.844444444444444, 
+            f:0.754,
+            g:-0.414814814814815
+        }
 
     }
 }
@@ -25,7 +49,7 @@ $(function () {
     //     text:"test",
     //     css:{
     //         "positon":"fixed",
-            
+
     //         "margin-top":$("#canvas").innerHeight() - 50 + "px",
     //         "color":"white"
     //     }   }).appendTo("#canvas")
@@ -41,7 +65,7 @@ $(function () {
 
     setup();
 
- 
+
     var starsGeometry = new THREE.BufferGeometry();
     starsGeometry.addAttribute('position', new THREE.BufferAttribute(new Float32Array(numParticles * 3), 3));
     starsGeometry.addAttribute('color', new THREE.BufferAttribute(new Float32Array(numParticles * 3), 3));
@@ -54,8 +78,8 @@ $(function () {
 
     for (let index = 0; index < starField.geometry.attributes.color.array.length; index += 3) {
 
-        out = map(index % colors.length/2, 0, colors.length, 200, 360)
-        c = new THREE.Color("hsl(" + out+ ", 50%, 50%)")
+        out = map(index % colors.length / 2, 0, colors.length, 200, 360)
+        c = new THREE.Color("hsl(" + out + ", 50%, 50%)")
         colors[index] = c.r;
         colors[index + 1] = c.g
         colors[index + 2] = c.b
@@ -74,16 +98,16 @@ $(function () {
         }
         for (let index = 0; index < numParticles / 10; index++) {
 
-            x1 = opts.d * Math.sin(opts.a * x) - Math.sin(opts.b * y)
-            y1 = opts.c * Math.cos(opts.a * x) + Math.cos(opts.b * y);
-            z1 = opts.e * Math.sin(opts.a * x) + Math.sin(opts.b * y);
+            xnew = g("x", "a") + g("x", "b") * x + g("x", "c") * y + g("x", "d") * z + g("x", "e") * Math.abs(x) + g("x", "f") * Math.abs(y) + g("x", "g") * Math.abs(z)
+            ynew = g("y", "a") + g("y", "b") * x + g("y", "c") * y + g("y", "d") * z + g("y", "e") * Math.abs(x) + g("y", "f") * Math.abs(y) + g("y", "g") * Math.abs(z)
+            znew = g("z", "a") + g("z", "b") * x + g("z", "c") * y + g("z", "d") * z + g("z", "e") * Math.abs(x) + g("z", "f") * Math.abs(y) + g("z", "g") * Math.abs(z)
 
             x = x1;
             y = y1;
             z = z1
             positions[currentPos++] = x * 20;
             positions[currentPos++] = y * 20;
-            positions[currentPos++] = z* 20
+            positions[currentPos++] = z * 20
         }
         starField.geometry.attributes.position.needsUpdate = true;
         starField.geometry.attributes.color.needsUpdate = true;
@@ -104,7 +128,7 @@ $(function () {
             var delta = now - prev;
             var fps = 1000 / delta;
             prev = now;
-            $("#fps").text("fps: " + Math.round(fps * 10) + " at 100 intervals, a = "+ opts.a.toFixed(4))
+            $("#fps").text("fps: " + Math.round(fps * 10) + " at 100 intervals, a = " + opts.a.toFixed(4))
         }
 
 

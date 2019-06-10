@@ -55,7 +55,7 @@ $(function () {
             x = 0;
             y = 0;
         }
-        for (let index = 0; index < numParticles / 100; index++) {
+        for (let index = 0; index < numParticles; index++) {
             a = opts.a / scale
             b = opts.b/ scale
             c = opts.c/ scale
